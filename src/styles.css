@@ -1,0 +1,13 @@
+body {
+    background-color: lightgray;
+}
+.centro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.tamanho {
+    height: 370px; 
+    width: 90%
+}

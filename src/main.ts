@@ -51,6 +51,7 @@ function renderChart() {
             color:'blue',
             dataPoints: dataPoint
         }],
+        backgroundColor:'lightgray'
         
     });
     chart.render();
