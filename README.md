@@ -1,21 +1,25 @@
 # FlyStraightDammit
- 
+
+## https://flystraightdammit.vanels.com.br/
+
 
 ## Setup local
 
 Com o node instaldo e configurado no computador instale o typescript com o comando
 
 ``` npm install -g typescript ```
+
 ``` npm install -g http-server ```
+
+Em seguida instale os pacotes específicos desta aplicação com o comando
+
 ``` npm install ```
 
-e em seguida transcreva os progamas TS para JS com o comando 
+para executar utilize o comando
 
 ```npm start```
 
-e inicialize um servidor local com 
+e em seguinda inicialize um servidor local com a extensão live-server do VScode ou com o comando 
 
 ``` http-server ```
-
-ou com a extensao live-server do VScode
 
