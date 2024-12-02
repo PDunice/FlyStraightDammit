@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build": "tsc && node copyFiles.js",
+    "start": "tsc && node copyFiles.js"
+  },
+  "devDependencies": {
+    "@types/canvasjs": "^1.9.11"
+  },
+  "name": "flystraightdammit",
+  "version": "1.0.0",
+  "description": "## Setup local",
+  "main": "copyFiles.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvasjs": "^1.8.3"
+  }
+}

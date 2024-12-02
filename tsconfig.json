@@ -1,0 +1,15 @@
+{
+  "compilerOptions": { // Opções do compilador
+      "target": "ES6", // versão do javaScript quer que seja compilado
+      "outDir": "./dist/", // Aonde colocar todos os arquivos que o typescript deve compilar
+      "allowSyntheticDefaultImports": true,
+      "noEmitOnError": true // Toda vez que gerar um erro, ele não deve jogar na pasta de destino
+
+
+  },
+  "include": [
+      "./src/**/*", // as pastas aonde ele tem que procurar os arquivos typescript e compilar na psta src de desen
+      // "globals.d.ts" // Include your custom globals declaration
+
+  ]
+}
