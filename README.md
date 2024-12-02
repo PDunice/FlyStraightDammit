@@ -7,12 +7,15 @@ Com o node instaldo e configurado no computador instale o typescript com o coman
 
 ``` npm install -g typescript ```
 ``` npm install -g http-server ```
+``` npm install ```
 
 e em seguida transcreva os progamas TS para JS com o comando 
 
-```tsc```
+```npm start```
 
 e inicialize um servidor local com 
 
 ``` http-server ```
+
+ou com a extensao live-server do VScode
 
