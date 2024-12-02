@@ -1,17 +1,12 @@
-// import CanvasJS from canvasjs";
-import { IchartOptions, dataPoint } from "./interface";
 
-
-
-const botaoFly = document.getElementById("fly") as HTMLButtonElement;
-let chartOptions!: IchartOptions;
+interface dataPoint {
+    label: string;
+    x?: number;
+    y: number;
+}
 
 let eixoY: Array<number> = [...Array(1000)].map(() => 1);
 let eixoX: Array<number> = [...Array(1000)].map(() => 1);
-
-
-
-botaoFly.addEventListener('click', () => fly());
 
 function gcd(a: number, b: number): number {
     while (b !== 0) {
@@ -36,34 +31,31 @@ function fly() {
             eixoY[index] = eixoY[index - 1] / gcd(index, eixoY[index - 1])
         }
         if (index === 999) {
-            montarGrafico()
+            renderChart()
         }
     }
 }
 
-function montarGrafico() {
+
+function renderChart() {
+
     const dataPoint: dataPoint[] = eixoY.map((dataY, index) => {
-        return { label: 'teste', y: dataY, x: eixoX[index] }
+        return { label: `${eixoX[index]}`, y: dataY, x: eixoX[index] }
     })
-
-    var chart  = new CanvasJS.Chart("chartContainer", {
+    const chart = new CanvasJS.Chart("chartContainer", {
+        title: {
+            text: "Fly Straight Dammit"
+        },
+        data: [{
+            type: "scatter",
+            color:'blue',
+            dataPoints: dataPoint
+        }],
         
-            title: {
-                text: "Fly Straight Dammit"
-            },
-            animationEnabled: true,
-            data: [{
-                type: "scatter",
-                dataPoints: dataPoint
-            }],
-    })
+    });
     chart.render();
-
-    console.log("chartOptions", chartOptions);
-
 }
 
-
-
-
+// Call the function when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", fly);
 
