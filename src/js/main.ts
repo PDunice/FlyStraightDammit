@@ -48,11 +48,10 @@ function renderChart() {
         },
         data: [{
             type: "scatter",
-            color:'blue',
+            color: 'blue',
             dataPoints: dataPoint
         }],
-        backgroundColor:'lightgray'
-        
+        backgroundColor: 'lightgray'
     });
     chart.render();
 }
